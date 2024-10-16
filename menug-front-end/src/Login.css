@@ -1,0 +1,54 @@
+body {
+  background-color: #503d3f;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.form-control {
+  font-family: "Comfortaa", sans-serif;
+}
+
+label {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.login {
+  background-color: #ffffff;
+  position: absolute;
+  padding: 60px 30px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -50%);
+  width: 60%;
+  height: 60%;
+  border-radius: 10px;
+}
+
+.login h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.login button {
+  all: unset;
+  background-color: black;
+  border-radius: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.login .bt-submit {
+  background-color: #539987;
+}
+.login .bt-cancel {
+  background-color: #623632;
+}
+
+.login .text-wrapper {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
