@@ -282,7 +282,7 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_9hw48Hx0Ee-_x8grdJwOwA" name="sendSectionDeleteRequestToServer"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_oLdEoIR1Ee-sIYzyRDB0wA" name="sendLayoutCreationRequestToServer"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_F6PtAHxYEe-DLL8cJtTLnQ" client="_j8wT0HxXEe-DLL8cJtTLnQ" supplier="_EFsmMHxYEe-DLL8cJtTLnQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_F6PtAHxYEe-DLL8cJtTLnQ" client="_86p64HueEe-VOKLdxNCcfg" supplier="_86p64HueEe-VOKLdxNCcfg"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_9B4IsHxYEe-DLL8cJtTLnQ" name="CanvaController" visibility="public">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_J6nVsHxZEe-DLL8cJtTLnQ" name="canvaController" type="_9B4IsHxYEe-DLL8cJtTLnQ"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_NZQ3wHxiEe-DLL8cJtTLnQ" name="addNewSection"/>
@@ -312,7 +312,6 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_ckPFUIQyEe-gxP6ABf5lBw" name="OpenList"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_eLJYwIQyEe-gxP6ABf5lBw" name="Refresh"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_g7TMMIQyEe-gxP6ABf5lBw" client="_NbgysIQyEe-gxP6ABf5lBw" supplier="_XErsYIQyEe-gxP6ABf5lBw"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_6LdfgIRLEe-QdNDyT4taaw" name="AuthenticationService">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_9F_W8IRLEe-QdNDyT4taaw" name="authenticationService" type="_6LdfgIRLEe-QdNDyT4taaw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_DvQJ8IRMEe-QdNDyT4taaw" name="InvalidateSession"/>
@@ -328,7 +327,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_BkdQ4IRNEe-QdNDyT4taaw" name="logger" type="__z-KsIRMEe-QdNDyT4taaw"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_EKVuAIRNEe-QdNDyT4taaw" name="LogoutEvent"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_JUxLgIRNEe-QdNDyT4taaw" client="_gFltYIRMEe-QdNDyT4taaw" supplier="__z-KsIRMEe-QdNDyT4taaw"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_JZx5cIRwEe-sIYzyRDB0wA" name="NewLayout">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_XJACgIRwEe-sIYzyRDB0wA" name="layoutID" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -340,7 +338,6 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_6gHhEIRwEe-sIYzyRDB0wA" name="createNewSection"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_8w3bsIRwEe-sIYzyRDB0wA" name="edit"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_CyUn0IRxEe-sIYzyRDB0wA" client="_ZAWaQHufEe-XCZh9IK8fMA" supplier="_JZx5cIRwEe-sIYzyRDB0wA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_c6qCoIRxEe-sIYzyRDB0wA" name="NewSection">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_1UnQEIRxEe-sIYzyRDB0wA" name="newSection" type="_c6qCoIRxEe-sIYzyRDB0wA"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_4dBygIRxEe-sIYzyRDB0wA" name="sectionID">
@@ -350,7 +347,6 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="__TVjAIRxEe-sIYzyRDB0wA" name="DeleteProduct"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_HYBLIIRyEe-sIYzyRDB0wA" name="Edit"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_KNgKgIRyEe-sIYzyRDB0wA" client="_JZx5cIRwEe-sIYzyRDB0wA" supplier="_c6qCoIRxEe-sIYzyRDB0wA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_U0A2MIRyEe-sIYzyRDB0wA" name="LoginTimeout">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_gmsaEIRyEe-sIYzyRDB0wA" name="counter" visibility="private">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
@@ -358,7 +354,20 @@
         <ownedOperation xmi:type="uml:Operation" xmi:id="_kUUiYIRyEe-sIYzyRDB0wA" name="DisplayMessage"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_mGDlwIRyEe-sIYzyRDB0wA" name="Logout"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Abstraction" xmi:id="_u4wxgIRyEe-sIYzyRDB0wA" client="_ZAWaQHufEe-XCZh9IK8fMA" supplier="_U0A2MIRyEe-sIYzyRDB0wA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_X7HvYIzpEe-5vfjgYUmkCw" client="_TC7ZkHufEe-XCZh9IK8fMA" supplier="_UloicHufEe-XCZh9IK8fMA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_mv1g4IzpEe-5vfjgYUmkCw" client="_EFsmMHxYEe-DLL8cJtTLnQ" supplier="_9B4IsHxYEe-DLL8cJtTLnQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_edtdMIzqEe-5vfjgYUmkCw" client="_7VF30IBrEe-XR4CjUEtvbg" supplier="_ZAWaQHufEe-XCZh9IK8fMA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_mRx2cIzqEe-5vfjgYUmkCw" client="_86p64HueEe-VOKLdxNCcfg" supplier="_ZAWaQHufEe-XCZh9IK8fMA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_pu4PcIzqEe-5vfjgYUmkCw" client="_U0A2MIRyEe-sIYzyRDB0wA" supplier="_86p64HueEe-VOKLdxNCcfg"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_q6UH0IzqEe-5vfjgYUmkCw" client="_gFltYIRMEe-QdNDyT4taaw" supplier="_ZAWaQHufEe-XCZh9IK8fMA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_CYPK0IzrEe-5vfjgYUmkCw" client="__z-KsIRMEe-QdNDyT4taaw" supplier="_U0A2MIRyEe-sIYzyRDB0wA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_sU1voIzrEe-5vfjgYUmkCw" client="_ce1d0HxkEe-DLL8cJtTLnQ" supplier="_y8oeYHxVEe-iqeCy2uzTpQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="__UAvYIzrEe-5vfjgYUmkCw" client="_ce1d0HxkEe-DLL8cJtTLnQ" supplier="_ZAWaQHufEe-XCZh9IK8fMA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_6hUnAIzsEe-5vfjgYUmkCw" client="_XErsYIQyEe-gxP6ABf5lBw" supplier="_NbgysIQyEe-gxP6ABf5lBw"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_884qgIzsEe-5vfjgYUmkCw" client="_c6qCoIRxEe-sIYzyRDB0wA" supplier="_JZx5cIRwEe-sIYzyRDB0wA"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_UMIYUIztEe-5vfjgYUmkCw" client="_NbgysIQyEe-gxP6ABf5lBw" supplier="_y8oeYHxVEe-iqeCy2uzTpQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_djqIYIztEe-5vfjgYUmkCw" client="_JZx5cIRwEe-sIYzyRDB0wA" supplier="_y8oeYHxVEe-iqeCy2uzTpQ"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_f0vaMIztEe-5vfjgYUmkCw" client="_c6qCoIRxEe-sIYzyRDB0wA" supplier="_0XQpUHxVEe-iqeCy2uzTpQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_tAE4EHufEe-XCZh9IK8fMA" name="Dynamic Analysis">
       <packagedElement xmi:type="uml:Package" xmi:id="_vF3f4HufEe-XCZh9IK8fMA" name="Login">
