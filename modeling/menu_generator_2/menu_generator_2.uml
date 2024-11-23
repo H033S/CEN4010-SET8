@@ -75,7 +75,10 @@ Composite Pattern</body>
           </ownedParameter>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_H8zpAKf6Ee-ACLW1LzBn6w" name="LogoutPage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_H8zpAKf6Ee-ACLW1LzBn6w" name="LogoutPage">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_avlJwKniEe-wHoGcqa-01Q" name="logoutPage" type="_H8zpAKf6Ee-ACLW1LzBn6w"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Vk2KQKniEe-wHoGcqa-01Q" name="submitLogout"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_LW1f4Kf6Ee-ACLW1LzBn6w" name="2FactorPage">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_f8f_kKmrEe-lGvTuZYpYeA" name="2FAPage" type="_LW1f4Kf6Ee-ACLW1LzBn6w"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_sLdvcKmuEe-lGvTuZYpYeA" name="submit2FACode">
@@ -109,21 +112,24 @@ Composite Pattern</body>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_7b7B8KnTEe-lGvTuZYpYeA" name="designerReceiver" type="_uk0lsKf8Ee-ACLW1LzBn6w"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_Hy6z0KnUEe-lGvTuZYpYeA" name="deleteContent"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_wLwuUKf8Ee-ACLW1LzBn6w" name="DesignerCommand" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wLwuUKf8Ee-ACLW1LzBn6w" name="DesignerCommand" visibility="package" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_vDjZQKniEe-wHoGcqa-01Q" name="designerReceiver" type="_uk0lsKf8Ee-ACLW1LzBn6w"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_oExpQKniEe-wHoGcqa-01Q" name="execute"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_yMuggKf8Ee-ACLW1LzBn6w" name="AddContentCommand">
         <generalization xmi:type="uml:Generalization" xmi:id="_SWIs8Kf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_2TPC4Kf8Ee-ACLW1LzBn6w" name="DeleteContentCommand">
-        <generalization xmi:type="uml:Generalization" xmi:id="_Vr6V8Kf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_mwPCwKnjEe-wHoGcqa-01Q" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_5atxMKf8Ee-ACLW1LzBn6w" name="ResizeContentCommand">
-        <generalization xmi:type="uml:Generalization" xmi:id="_Z7VjwKf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_oSW80KnjEe-wHoGcqa-01Q" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_94_TUKf8Ee-ACLW1LzBn6w" name="ChangeForegroundCommand">
         <generalization xmi:type="uml:Generalization" xmi:id="_Ow8u8Kf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_BGqJMKf9Ee-ACLW1LzBn6w" name="ChangeBackgroundCommand">
-        <generalization xmi:type="uml:Generalization" xmi:id="_GBazAKf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_gM__QKnjEe-wHoGcqa-01Q" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_kAwUkKf9Ee-ACLW1LzBn6w" client="_wLwuUKf8Ee-ACLW1LzBn6w" supplier="_uk0lsKf8Ee-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_lB8EwKf9Ee-ACLW1LzBn6w" client="_tXIqkKf8Ee-ACLW1LzBn6w" supplier="_uk0lsKf8Ee-ACLW1LzBn6w"/>
@@ -159,7 +165,22 @@ Composite Pattern</body>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_sO6zYKf-Ee-ACLW1LzBn6w" client="_8I1EoKf5Ee-ACLW1LzBn6w" supplier="_TRWikKf-Ee-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_wx4BMKf-Ee-ACLW1LzBn6w" client="_H8zpAKf6Ee-ACLW1LzBn6w" supplier="_TRWikKf-Ee-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_zZHJMKf-Ee-ACLW1LzBn6w" client="_LW1f4Kf6Ee-ACLW1LzBn6w" supplier="_TRWikKf-Ee-ACLW1LzBn6w"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_96So8Kf-Ee-ACLW1LzBn6w" name="Frame"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_96So8Kf-Ee-ACLW1LzBn6w" name="Frame">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_78LcEKnjEe-wHoGcqa-01Q" name="leftTopPosition_x">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Ad1CUKnkEe-wHoGcqa-01Q" name="width">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_CSCK4KnkEe-wHoGcqa-01Q" name="height">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Sy8YcKnkEe-wHoGcqa-01Q" name="leftTopPosition_y">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_yvwTUKnkEe-wHoGcqa-01Q" name="addContent"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_0YmgcKnkEe-wHoGcqa-01Q" name="removeContent"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="__TAvYKf-Ee-ACLW1LzBn6w" name="Content"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_AiQwwKf_Ee-ACLW1LzBn6w" name="Container">
         <generalization xmi:type="uml:Generalization" xmi:id="_H4ORsKf_Ee-ACLW1LzBn6w" general="__TAvYKf-Ee-ACLW1LzBn6w"/>
@@ -177,7 +198,9 @@ Composite Pattern</body>
         <ownedEnd xmi:type="uml:Property" xmi:id="_h7-ugKf_Ee-ACLW1LzBn6w" name="frame" type="_96So8Kf-Ee-ACLW1LzBn6w" association="_h72ysKf_Ee-ACLW1LzBn6w"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_h785UKf_Ee-ACLW1LzBn6w" name="content" type="__TAvYKf-Ee-ACLW1LzBn6w" association="_h72ysKf_Ee-ACLW1LzBn6w"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_KvsYoKgAEe-ACLW1LzBn6w" name="Designer"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KvsYoKgAEe-ACLW1LzBn6w" name="Designer">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wimUsKnjEe-wHoGcqa-01Q" name="frame" type="_96So8Kf-Ee-ACLW1LzBn6w"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_V24IcKgAEe-ACLW1LzBn6w" client="_tXIqkKf8Ee-ACLW1LzBn6w" supplier="_KvsYoKgAEe-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_r3ya4KgAEe-ACLW1LzBn6w" memberEnd="_r4nhUKgAEe-ACLW1LzBn6w _r4wEMKgAEe-ACLW1LzBn6w">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_r4flgKgAEe-ACLW1LzBn6w" source="org.eclipse.papyrus">
@@ -229,7 +252,7 @@ Singleton Pattern</body>
 ------------------
 Singleton Pattern</body>
       </ownedComment>
-      <ownedComment xmi:type="uml:Comment" xmi:id="_f9pjYKndEe-wHoGcqa-01Q" annotatedElement="_cYEj0KndEe-wHoGcqa-01Q">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_f9pjYKndEe-wHoGcqa-01Q" annotatedElement="_Zk62kKf3Ee-qI7wKUSwh3w">
         <body>Class in charge of managing session for each user
 --------------------------
 Singleton Pattern</body>
@@ -338,8 +361,52 @@ Singleton Pattern</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_OujVEKhnEe-ACLW1LzBn6w" name="User">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_vASFoKmcEe-s_sqgeWcnag" name="user" type="_OujVEKhnEe-ACLW1LzBn6w"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pgc1sKnlEe-wHoGcqa-01Q" name="username">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sClbQKnlEe-wHoGcqa-01Q" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_unBt8KnlEe-wHoGcqa-01Q" name="email">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w1TjYKnlEe-wHoGcqa-01Q" name="firstName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yslOEKnlEe-wHoGcqa-01Q" name="lastName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2n0UkKnlEe-wHoGcqa-01Q" name="createdAt">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4_TJUKnlEe-wHoGcqa-01Q" name="updatedAt">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_B94N4KnmEe-wHoGcqa-01Q" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Pgl2AKhnEe-ACLW1LzBn6w" name="Menu"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Pgl2AKhnEe-ACLW1LzBn6w" name="Menu">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_S8S20KnmEe-wHoGcqa-01Q" name="id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VRQjEKnmEe-wHoGcqa-01Q" name="name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ct4ssKnmEe-wHoGcqa-01Q" name="price">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBigDecimal"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_gdvCkKnmEe-wHoGcqa-01Q" name="category">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_jwGLMKnmEe-wHoGcqa-01Q" name="createdAt">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_l8CeUKnmEe-wHoGcqa-01Q" name="updatedAt">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EDate"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xKZNIKnmEe-wHoGcqa-01Q" name="session" type="_96So8Kf-Ee-ACLW1LzBn6w"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_xrqYMKhnEe-ACLW1LzBn6w" client="_K0LKMKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_yK4q0KhnEe-ACLW1LzBn6w" client="_JVqk0KhnEe-ACLW1LzBn6w" supplier="_Gw9MYKhnEe-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_z8vqAKhnEe-ACLW1LzBn6w" client="_OujVEKhnEe-ACLW1LzBn6w" supplier="_Gw9MYKhnEe-ACLW1LzBn6w"/>
@@ -347,13 +414,13 @@ Singleton Pattern</body>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_5osgMKhnEe-ACLW1LzBn6w" client="_Pgl2AKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_8G8rUKhnEe-ACLW1LzBn6w" client="_K0LKMKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_Bco9oKhoEe-ACLW1LzBn6w" client="_Hz7FQKhnEe-ACLW1LzBn6w" supplier="_Gw9MYKhnEe-ACLW1LzBn6w"/>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_DZlygKhoEe-ACLW1LzBn6w" client="_MFsccKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DZlygKhoEe-ACLW1LzBn6w" client="_MFsccKhnEe-ACLW1LzBn6w" supplier="_jGjDQKm3Ee-lGvTuZYpYeA"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_cYEj0KndEe-wHoGcqa-01Q" name="SessionStore">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_v-ETAKndEe-wHoGcqa-01Q" name="sessionStore" type="_cYEj0KndEe-wHoGcqa-01Q"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_EHuv8KneEe-wHoGcqa-01Q" name="validateSession" method="__HipAKncEe-wHoGcqa-01Q"/>
         <ownedOperation xmi:type="uml:Operation" xmi:id="_22kmcKneEe-wHoGcqa-01Q" name="createNewSession"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Dependency" xmi:id="_etXnQKndEe-wHoGcqa-01Q" client="_cYEj0KndEe-wHoGcqa-01Q" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_etXnQKndEe-wHoGcqa-01Q" client="_cYEj0KndEe-wHoGcqa-01Q" supplier="_Zk62kKf3Ee-qI7wKUSwh3w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_bIjMgKf3Ee-qI7wKUSwh3w" name="Storage">
       <packagedElement xmi:type="uml:Package" xmi:id="_lhbr4Kf3Ee-qI7wKUSwh3w" name="Repository">
