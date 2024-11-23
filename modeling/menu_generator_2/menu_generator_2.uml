@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_D6kRcKYfEe-qI7wKUSwh3w" name="menu_generator_2">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_D80UMKYfEe-qI7wKUSwh3w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_G5C0wKYfEe-qI7wKUSwh3w" name="Static">
+    <packagedElement xmi:type="uml:Package" xmi:id="_XAUL0Kf3Ee-qI7wKUSwh3w" name="UserInterface">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_-iyloKf5Ee-ACLW1LzBn6w" annotatedElement="_XAUL0Kf3Ee-qI7wKUSwh3w">
+        <body>Class to Authenticate the user</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_UdvaAKf6Ee-ACLW1LzBn6w" annotatedElement="_XAUL0Kf3Ee-qI7wKUSwh3w">
+        <body>Close User session</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_arZ2IKf6Ee-ACLW1LzBn6w" annotatedElement="_LW1f4Kf6Ee-ACLW1LzBn6w">
+        <body>Page where user will submit code sent through email</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ulPHUKf6Ee-ACLW1LzBn6w" annotatedElement="_irTE4Kf6Ee-ACLW1LzBn6w">
+        <body>Page where user will create/update menu</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_9G7PIKf6Ee-ACLW1LzBn6w" annotatedElement="_kdiekKf6Ee-ACLW1LzBn6w">
+        <body>Page where user will select and upload images</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_w8az8KhkEe-ACLW1LzBn6w" annotatedElement="_TRWikKf-Ee-ACLW1LzBn6w">
+        <body>Service that will handle:
+- Login 
+- Logout 
+- 2Factor Authentication
+
+for the client</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_CMktIKhlEe-ACLW1LzBn6w" annotatedElement="_tXIqkKf8Ee-ACLW1LzBn6w">
+        <body>Client that will send commands being executed to server
+--------------------------
+Command Pattern(Client)</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Q19_cKhlEe-ACLW1LzBn6w" annotatedElement="_uk0lsKf8Ee-ACLW1LzBn6w">
+        <body>Class that Implements all commands for Designer
+-----------------------------
+Command Pattern (Receiver)
+</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_dX_VkKhlEe-ACLW1LzBn6w" annotatedElement="_wLwuUKf8Ee-ACLW1LzBn6w">
+        <body>Base command class to be implemented for each designer command
+------------------------------
+Command Pattern (Command)</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_thJxgKhlEe-ACLW1LzBn6w" annotatedElement="_5atxMKf8Ee-ACLW1LzBn6w _2TPC4Kf8Ee-ACLW1LzBn6w _BGqJMKf9Ee-ACLW1LzBn6w _94_TUKf8Ee-ACLW1LzBn6w _yMuggKf8Ee-ACLW1LzBn6w">
+        <body>Concrete Commands that will be used by the user when editing the menu
+----------------------------------------
+Command Pattern (Concrete Commands)</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VpcgEKhmEe-ACLW1LzBn6w" annotatedElement="_KvsYoKgAEe-ACLW1LzBn6w">
+        <body>Class that will hold all items from a specific menu being designed</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_eWfIsKhmEe-ACLW1LzBn6w" annotatedElement="_96So8Kf-Ee-ACLW1LzBn6w">
+        <body>Wrapper for Content being added to the canvas</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ngRXsKhmEe-ACLW1LzBn6w" annotatedElement="__TAvYKf-Ee-ACLW1LzBn6w">
+        <body>Content Base Class
+
+Composite Pattern</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_s5VHEKhmEe-ACLW1LzBn6w" annotatedElement="_BjRh0Kf_Ee-ACLW1LzBn6w _AiQwwKf_Ee-ACLW1LzBn6w _DTKyIKf_Ee-ACLW1LzBn6w">
+        <body>Content Implementation</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_gNqsMKf3Ee-qI7wKUSwh3w" client="_XAUL0Kf3Ee-qI7wKUSwh3w" supplier="_Zk62kKf3Ee-qI7wKUSwh3w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_8I1EoKf5Ee-ACLW1LzBn6w" name="LoginPage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_H8zpAKf6Ee-ACLW1LzBn6w" name="LogoutPage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_LW1f4Kf6Ee-ACLW1LzBn6w" name="2FactorPage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_irTE4Kf6Ee-ACLW1LzBn6w" name="CanvasPage"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_kdiekKf6Ee-ACLW1LzBn6w" name="UploadImagePage"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_QqBbUKf7Ee-ACLW1LzBn6w" client="_H8zpAKf6Ee-ACLW1LzBn6w" supplier="_8I1EoKf5Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_TN6UYKf7Ee-ACLW1LzBn6w" client="_irTE4Kf6Ee-ACLW1LzBn6w" supplier="_8I1EoKf5Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_wJKiwKf7Ee-ACLW1LzBn6w" client="_LW1f4Kf6Ee-ACLW1LzBn6w" supplier="_8I1EoKf5Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_tXIqkKf8Ee-ACLW1LzBn6w" name="DesignerService"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_uk0lsKf8Ee-ACLW1LzBn6w" name="DesignerReceiver"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_wLwuUKf8Ee-ACLW1LzBn6w" name="DesignerCommand" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yMuggKf8Ee-ACLW1LzBn6w" name="AddContentCommand">
+        <generalization xmi:type="uml:Generalization" xmi:id="_SWIs8Kf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_2TPC4Kf8Ee-ACLW1LzBn6w" name="DeleteContentCommand">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Vr6V8Kf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_5atxMKf8Ee-ACLW1LzBn6w" name="ResizeContentCommand">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Z7VjwKf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_94_TUKf8Ee-ACLW1LzBn6w" name="ChangeForegroundCommand">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Ow8u8Kf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BGqJMKf9Ee-ACLW1LzBn6w" name="ChangeBackgroundCommand">
+        <generalization xmi:type="uml:Generalization" xmi:id="_GBazAKf9Ee-ACLW1LzBn6w" general="_wLwuUKf8Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_kAwUkKf9Ee-ACLW1LzBn6w" client="_wLwuUKf8Ee-ACLW1LzBn6w" supplier="_uk0lsKf8Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_lB8EwKf9Ee-ACLW1LzBn6w" client="_tXIqkKf8Ee-ACLW1LzBn6w" supplier="_uk0lsKf8Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_v2qLkKf9Ee-ACLW1LzBn6w" client="_kdiekKf6Ee-ACLW1LzBn6w" supplier="_tXIqkKf8Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_yYmj4Kf9Ee-ACLW1LzBn6w" client="_irTE4Kf6Ee-ACLW1LzBn6w" supplier="_tXIqkKf8Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TRWikKf-Ee-ACLW1LzBn6w" name="AuthService"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_sO6zYKf-Ee-ACLW1LzBn6w" client="_8I1EoKf5Ee-ACLW1LzBn6w" supplier="_TRWikKf-Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_wx4BMKf-Ee-ACLW1LzBn6w" client="_H8zpAKf6Ee-ACLW1LzBn6w" supplier="_TRWikKf-Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_zZHJMKf-Ee-ACLW1LzBn6w" client="_LW1f4Kf6Ee-ACLW1LzBn6w" supplier="_TRWikKf-Ee-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_96So8Kf-Ee-ACLW1LzBn6w" name="Frame"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="__TAvYKf-Ee-ACLW1LzBn6w" name="Content"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_AiQwwKf_Ee-ACLW1LzBn6w" name="Container">
+        <generalization xmi:type="uml:Generalization" xmi:id="_H4ORsKf_Ee-ACLW1LzBn6w" general="__TAvYKf-Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BjRh0Kf_Ee-ACLW1LzBn6w" name="Image">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Ibq9AKf_Ee-ACLW1LzBn6w" general="__TAvYKf-Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DTKyIKf_Ee-ACLW1LzBn6w" name="Text">
+        <generalization xmi:type="uml:Generalization" xmi:id="_I7JHQKf_Ee-ACLW1LzBn6w" general="__TAvYKf-Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_h72ysKf_Ee-ACLW1LzBn6w" memberEnd="_h785UKf_Ee-ACLW1LzBn6w _h7-ugKf_Ee-ACLW1LzBn6w">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h77rMKf_Ee-ACLW1LzBn6w" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h78SQKf_Ee-ACLW1LzBn6w" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_h7-ugKf_Ee-ACLW1LzBn6w" name="frame" type="_96So8Kf-Ee-ACLW1LzBn6w" association="_h72ysKf_Ee-ACLW1LzBn6w"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_h785UKf_Ee-ACLW1LzBn6w" name="content" type="__TAvYKf-Ee-ACLW1LzBn6w" association="_h72ysKf_Ee-ACLW1LzBn6w"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KvsYoKgAEe-ACLW1LzBn6w" name="Designer"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_V24IcKgAEe-ACLW1LzBn6w" client="_tXIqkKf8Ee-ACLW1LzBn6w" supplier="_KvsYoKgAEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_r3ya4KgAEe-ACLW1LzBn6w" memberEnd="_r4nhUKgAEe-ACLW1LzBn6w _r4wEMKgAEe-ACLW1LzBn6w">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_r4flgKgAEe-ACLW1LzBn6w" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_r4lFEKgAEe-ACLW1LzBn6w" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_r4nhUKgAEe-ACLW1LzBn6w" name="frame" type="_96So8Kf-Ee-ACLW1LzBn6w" association="_r3ya4KgAEe-ACLW1LzBn6w">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u4GxQKgAEe-ACLW1LzBn6w"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u4ZsMKgAEe-ACLW1LzBn6w" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_r4wEMKgAEe-ACLW1LzBn6w" name="designer" type="_KvsYoKgAEe-ACLW1LzBn6w" association="_r3ya4KgAEe-ACLW1LzBn6w"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Zk62kKf3Ee-qI7wKUSwh3w" name="ApplicationLogic">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Uv7BoKhnEe-ACLW1LzBn6w" annotatedElement="_Gw9MYKhnEe-ACLW1LzBn6w">
+        <body>Entry Point for all upcomming request related to
+- Login
+- Logout
+- 2FactorAuthentication</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_cRzesKhnEe-ACLW1LzBn6w" annotatedElement="_Hz7FQKhnEe-ACLW1LzBn6w">
+        <body>Entry Point for all upcomming request related to menu actions</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_jhEhwKhnEe-ACLW1LzBn6w" annotatedElement="_JVqk0KhnEe-ACLW1LzBn6w">
+        <body>Business Logic for all request related to
+- Login
+- Logout
+- 2FactorAuthentication
+------------------
+Singleton Pattern</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_sWcnAKhnEe-ACLW1LzBn6w" annotatedElement="_K0LKMKhnEe-ACLW1LzBn6w">
+        <body>Busines Logic for all upcomming request related to menu actions
+------------------
+Singleton Pattern</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_F4uHYKhoEe-ACLW1LzBn6w" annotatedElement="_OujVEKhnEe-ACLW1LzBn6w">
+        <body>User Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_HVY5sKhoEe-ACLW1LzBn6w" annotatedElement="_Pgl2AKhnEe-ACLW1LzBn6w">
+        <body>Menu Model</body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_M3Hc4KhoEe-ACLW1LzBn6w" annotatedElement="_MFsccKhnEe-ACLW1LzBn6w">
+        <body>Class in charge of sending notification to user such as 2FA Authentication Email
+------------------
+Singleton Pattern</body>
+      </ownedComment>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_g0rB0Kf3Ee-qI7wKUSwh3w" client="_Zk62kKf3Ee-qI7wKUSwh3w" supplier="_bIjMgKf3Ee-qI7wKUSwh3w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Gw9MYKhnEe-ACLW1LzBn6w" name="AuthController"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Hz7FQKhnEe-ACLW1LzBn6w" name="MenuController"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JVqk0KhnEe-ACLW1LzBn6w" name="AuthService"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_K0LKMKhnEe-ACLW1LzBn6w" name="MenuService"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_MFsccKhnEe-ACLW1LzBn6w" name="NotificationService"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OujVEKhnEe-ACLW1LzBn6w" name="User"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Pgl2AKhnEe-ACLW1LzBn6w" name="Menu"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_xrqYMKhnEe-ACLW1LzBn6w" client="_K0LKMKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_yK4q0KhnEe-ACLW1LzBn6w" client="_JVqk0KhnEe-ACLW1LzBn6w" supplier="_Gw9MYKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_z8vqAKhnEe-ACLW1LzBn6w" client="_OujVEKhnEe-ACLW1LzBn6w" supplier="_Gw9MYKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_1PMJUKhnEe-ACLW1LzBn6w" client="_JVqk0KhnEe-ACLW1LzBn6w" supplier="_Zk62kKf3Ee-qI7wKUSwh3w _Gw9MYKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_5osgMKhnEe-ACLW1LzBn6w" client="_Pgl2AKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_8G8rUKhnEe-ACLW1LzBn6w" client="_K0LKMKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Bco9oKhoEe-ACLW1LzBn6w" client="_Hz7FQKhnEe-ACLW1LzBn6w" supplier="_Gw9MYKhnEe-ACLW1LzBn6w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DZlygKhoEe-ACLW1LzBn6w" client="_MFsccKhnEe-ACLW1LzBn6w" supplier="_Hz7FQKhnEe-ACLW1LzBn6w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_bIjMgKf3Ee-qI7wKUSwh3w" name="Storage">
+      <packagedElement xmi:type="uml:Package" xmi:id="_lhbr4Kf3Ee-qI7wKUSwh3w" name="Repository">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_-ZoNsKhpEe-ACLW1LzBn6w" annotatedElement="_wyuTIKhpEe-ACLW1LzBn6w">
+          <body>User Repository
+</body>
+        </ownedComment>
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DUjPkKhqEe-ACLW1LzBn6w" annotatedElement="_7_Y_4KhpEe-ACLW1LzBn6w">
+          <body>Menu Repository
+</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Class" xmi:id="_wyuTIKhpEe-ACLW1LzBn6w" name="UserRepository"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_7_Y_4KhpEe-ACLW1LzBn6w" name="MenuRepository"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Model" xmi:id="_t7VbYKZdEe-qI7wKUSwh3w" name="Dynamic">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_wIPX0KZdEe-qI7wKUSwh3w" name="State Machine (Presentation)">
+      <region xmi:type="uml:Region" xmi:id="_yFGtIKZdEe-qI7wKUSwh3w" name="2 Factor Require">
+        <transition xmi:type="uml:Transition" xmi:id="_9Q3a8KZdEe-qI7wKUSwh3w" source="_3XnvoKZdEe-qI7wKUSwh3w" target="_5x9EEKZdEe-qI7wKUSwh3w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_OrkXQKZeEe-qI7wKUSwh3w" name="Submit Credentials" source="_5x9EEKZdEe-qI7wKUSwh3w" target="_GUDSsKZeEe-qI7wKUSwh3w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_bX444KZeEe-qI7wKUSwh3w" name="API Call" source="_GUDSsKZeEe-qI7wKUSwh3w" target="_X7ecYKZeEe-qI7wKUSwh3w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_rzr88KZeEe-qI7wKUSwh3w" name="2 Factor Required" source="_X7ecYKZeEe-qI7wKUSwh3w" target="_mlYsEKZeEe-qI7wKUSwh3w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_E-FTYKZgEe-qI7wKUSwh3w" name="Valid 2 Factor Authentication" source="_mlYsEKZeEe-qI7wKUSwh3w" target="_AfscgKZgEe-qI7wKUSwh3w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_X-cl8KZgEe-qI7wKUSwh3w" name="Logout/Session TimeOut" source="_AfscgKZgEe-qI7wKUSwh3w" target="_5x9EEKZdEe-qI7wKUSwh3w"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_3XnvoKZdEe-qI7wKUSwh3w"/>
+        <subvertex xmi:type="uml:State" xmi:id="_5x9EEKZdEe-qI7wKUSwh3w" name="LoggedOut"/>
+        <subvertex xmi:type="uml:State" xmi:id="_GUDSsKZeEe-qI7wKUSwh3w" name="Authenticating"/>
+        <subvertex xmi:type="uml:State" xmi:id="_X7ecYKZeEe-qI7wKUSwh3w" name="AwaitingBackendResponse"/>
+        <subvertex xmi:type="uml:State" xmi:id="_mlYsEKZeEe-qI7wKUSwh3w" name="2FactorPending"/>
+        <subvertex xmi:type="uml:State" xmi:id="_AfscgKZgEe-qI7wKUSwh3w" name="LoggedIn">
+          <region xmi:type="uml:Region" xmi:id="_hFPLUKZgEe-qI7wKUSwh3w" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_q9qB8KZgEe-qI7wKUSwh3w" source="_hFeb4KZgEe-qI7wKUSwh3w" target="_mT3zYKZgEe-qI7wKUSwh3w"/>
+            <transition xmi:type="uml:Transition" xmi:id="_PmTZ0KZhEe-qI7wKUSwh3w" name="Edit Menu" source="_mT3zYKZgEe-qI7wKUSwh3w" target="_3sVUAKZgEe-qI7wKUSwh3w"/>
+            <transition xmi:type="uml:Transition" xmi:id="_m2Dd8KZhEe-qI7wKUSwh3w" name="Edit Section" source="_3sVUAKZgEe-qI7wKUSwh3w" target="_X_hukKZhEe-qI7wKUSwh3w"/>
+            <transition xmi:type="uml:Transition" xmi:id="_a97j8KZiEe-qI7wKUSwh3w" name="Edition Saved" source="_cWZoMKZhEe-qI7wKUSwh3w" target="_3sVUAKZgEe-qI7wKUSwh3w"/>
+            <transition xmi:type="uml:Transition" xmi:id="_rG5LkKZiEe-qI7wKUSwh3w" source="_X_hukKZhEe-qI7wKUSwh3w" target="_3sVUAKZgEe-qI7wKUSwh3w"/>
+            <transition xmi:type="uml:Transition" xmi:id="_0674gKZiEe-qI7wKUSwh3w" name="Edit Item" source="_3sVUAKZgEe-qI7wKUSwh3w" target="_cWZoMKZhEe-qI7wKUSwh3w"/>
+            <transition xmi:type="uml:Transition" xmi:id="_jSRjQKZjEe-qI7wKUSwh3w" name="Menu Saved" source="_3sVUAKZgEe-qI7wKUSwh3w" target="_mT3zYKZgEe-qI7wKUSwh3w"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_hFeb4KZgEe-qI7wKUSwh3w" name=""/>
+            <subvertex xmi:type="uml:State" xmi:id="_mT3zYKZgEe-qI7wKUSwh3w" name="List Menu"/>
+            <subvertex xmi:type="uml:State" xmi:id="_3sVUAKZgEe-qI7wKUSwh3w" name="Menu Editing"/>
+            <subvertex xmi:type="uml:State" xmi:id="_X_hukKZhEe-qI7wKUSwh3w" name="Section Editing"/>
+            <subvertex xmi:type="uml:State" xmi:id="_cWZoMKZhEe-qI7wKUSwh3w" name="Item Editing"/>
+          </region>
+        </subvertex>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_H1JqUKZkEe-qI7wKUSwh3w" name="State Machine (Login)">
+      <region xmi:type="uml:Region" xmi:id="_JLTk8KZkEe-qI7wKUSwh3w" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_zsDhoKhyEe-ACLW1LzBn6w" source="_QxlZ0KZkEe-qI7wKUSwh3w" target="_jiEmUKhyEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_CflnYKhzEe-ACLW1LzBn6w" source="_jiEmUKhyEe-ACLW1LzBn6w" target="_9MShwKhyEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_epDMcKhzEe-ACLW1LzBn6w" name="Yes_VC" source="_9MShwKhyEe-ACLW1LzBn6w" target="_XY-REKhzEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_pgLuEKhzEe-ACLW1LzBn6w" source="_XY-REKhzEe-ACLW1LzBn6w" target="_jHMLsKhzEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_z6kCQKhzEe-ACLW1LzBn6w" source="_jHMLsKhzEe-ACLW1LzBn6w" target="_v9cFYKhzEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_EiEAAKh0Ee-ACLW1LzBn6w" name="Yes_IC" source="_v9cFYKhzEe-ACLW1LzBn6w" target="_9GMrYKhzEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_UXeZgKh0Ee-ACLW1LzBn6w" source="_9GMrYKhzEe-ACLW1LzBn6w" target="_OlXQ8Kh0Ee-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_X1gmoKh0Ee-ACLW1LzBn6w" source="_OlXQ8Kh0Ee-ACLW1LzBn6w" target="_VwkTYKh0Ee-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_EvatoKjDEe-ACLW1LzBn6w" name="NO_IV" source="_9MShwKhyEe-ACLW1LzBn6w" target="_jiEmUKhyEe-ACLW1LzBn6w"/>
+        <transition xmi:type="uml:Transition" xmi:id="_M4wzUKjDEe-ACLW1LzBn6w" name="NO_UC" source="_v9cFYKhzEe-ACLW1LzBn6w" target="_jiEmUKhyEe-ACLW1LzBn6w"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_QxlZ0KZkEe-qI7wKUSwh3w"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jiEmUKhyEe-ACLW1LzBn6w" name="User Entering Credentials"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_9MShwKhyEe-ACLW1LzBn6w" name="Is input valid?" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_XY-REKhzEe-ACLW1LzBn6w" name="Making Request to Server ( Credentials Validation )"/>
+        <subvertex xmi:type="uml:State" xmi:id="_jHMLsKhzEe-ACLW1LzBn6w" name="Verifying User Credentials"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_v9cFYKhzEe-ACLW1LzBn6w" name="Are credentials valid?" kind="choice"/>
+        <subvertex xmi:type="uml:State" xmi:id="_9GMrYKhzEe-ACLW1LzBn6w" name="Log user in"/>
+        <subvertex xmi:type="uml:State" xmi:id="_OlXQ8Kh0Ee-ACLW1LzBn6w" name="Redirecting user to Home Page"/>
+        <subvertex xmi:type="uml:FinalState" xmi:id="_VwkTYKh0Ee-ACLW1LzBn6w" name=""/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_dQUIwKbPEe-qI7wKUSwh3w" name="System - Sequence Diagram">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_j97lYKbREe-qI7wKUSwh3w" name=""/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_uc-CAKbPEe-qI7wKUSwh3w" name="login" coveredBy="_6txFQKbPEe-qI7wKUSwh3w _YBWUEKbQEe-qI7wKUSwh3w _DzfzUKbTEe-qI7wKUSwh3w _WpWmYKbQEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_3TRUUKbPEe-qI7wKUSwh3w" name="User" coveredBy="_6tuB8KbPEe-qI7wKUSwh3w _ZUAHYKbTEe-qI7wKUSwh3w _upk90KbTEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="__O01oKbPEe-qI7wKUSwh3w" name="authService" coveredBy="_YBbzoKbQEe-qI7wKUSwh3w _9fSVMKbQEe-qI7wKUSwh3w _hUprcKbQEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_sAY1YKbQEe-qI7wKUSwh3w" name="authController" coveredBy="_9fWmoKbQEe-qI7wKUSwh3w _DIm4sKbSEe-qI7wKUSwh3w _PVoPMKbSEe-qI7wKUSwh3w _1ulHEKbSEe-qI7wKUSwh3w _z3V4oKbSEe-qI7wKUSwh3w _CBCzsKbSEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_j95wMKbREe-qI7wKUSwh3w" name="" represents="_j97lYKbREe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_8n3IgKbREe-qI7wKUSwh3w" name="userRepository" coveredBy="_DIoG0KbSEe-qI7wKUSwh3w _PVjWsKbSEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_nFCDwKbSEe-qI7wKUSwh3w" name="notificationSystem" coveredBy="_1upYgKbSEe-qI7wKUSwh3w _Dza60KbTEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_PpX1IKbTEe-qI7wKUSwh3w" name="menuPage" coveredBy="_ZUEY0KbTEe-qI7wKUSwh3w _upp2UKbTEe-qI7wKUSwh3w _EzQKsKbUEe-qI7wKUSwh3w _0WAVIKbTEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_2kUm0KbTEe-qI7wKUSwh3w" name="canvaService" coveredBy="_EzUcIKbUEe-qI7wKUSwh3w _56k7gKbUEe-qI7wKUSwh3w _7J-RYKbVEe-qI7wKUSwh3w _4WvxQKbUEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_ViwN4KbUEe-qI7wKUSwh3w" name="canvaController" coveredBy="_56qbEKbUEe-qI7wKUSwh3w _imfUgKbVEe-qI7wKUSwh3w _g4ndcKbVEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_FKP48KbVEe-qI7wKUSwh3w" name="MenuService" coveredBy="_imjl8KbVEe-qI7wKUSwh3w _zu94YKbVEe-qI7wKUSwh3w _yhf_sKbVEe-qI7wKUSwh3w"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_rqHRIKbVEe-qI7wKUSwh3w" name="canvasRepo" coveredBy="_zvDX8KbVEe-qI7wKUSwh3w _7J5_8KbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6txFQKbPEe-qI7wKUSwh3w" name="Message3ReceiveEvent" covered="_uc-CAKbPEe-qI7wKUSwh3w" message="_6tf_gKbPEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_WpWmYKbQEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification7" covered="_uc-CAKbPEe-qI7wKUSwh3w" finish="_YBWUEKbQEe-qI7wKUSwh3w" start="_6txFQKbPEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6tuB8KbPEe-qI7wKUSwh3w" name="Message3SendEvent" covered="_3TRUUKbPEe-qI7wKUSwh3w" message="_6tf_gKbPEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YBWUEKbQEe-qI7wKUSwh3w" name="Message9SendEvent" covered="_uc-CAKbPEe-qI7wKUSwh3w" message="_YA0IkKbQEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YBbzoKbQEe-qI7wKUSwh3w" name="Message9ReceiveEvent" covered="__O01oKbPEe-qI7wKUSwh3w" message="_YA0IkKbQEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_hUprcKbQEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification11" covered="__O01oKbPEe-qI7wKUSwh3w" finish="_9fSVMKbQEe-qI7wKUSwh3w" start="_YBbzoKbQEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9fSVMKbQEe-qI7wKUSwh3w" name="Message14SendEvent" covered="__O01oKbPEe-qI7wKUSwh3w" message="_9e8-AKbQEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_9fWmoKbQEe-qI7wKUSwh3w" name="Message14ReceiveEvent" covered="_sAY1YKbQEe-qI7wKUSwh3w" message="_9e8-AKbQEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_CBCzsKbSEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification19" covered="_sAY1YKbQEe-qI7wKUSwh3w" finish="_DIm4sKbSEe-qI7wKUSwh3w" start="_9fWmoKbQEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DIm4sKbSEe-qI7wKUSwh3w" name="Message21SendEvent" covered="_sAY1YKbQEe-qI7wKUSwh3w" message="_DIe84KbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DIoG0KbSEe-qI7wKUSwh3w" name="Message21ReceiveEvent" covered="_8n3IgKbREe-qI7wKUSwh3w" message="_DIe84KbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_PVjWsKbSEe-qI7wKUSwh3w" name="Message23SendEvent" covered="_8n3IgKbREe-qI7wKUSwh3w" message="_PU4oUKbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_PVoPMKbSEe-qI7wKUSwh3w" name="Message23ReceiveEvent" covered="_sAY1YKbQEe-qI7wKUSwh3w" message="_PU4oUKbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_z3V4oKbSEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification27" covered="_sAY1YKbQEe-qI7wKUSwh3w" finish="_1ulHEKbSEe-qI7wKUSwh3w" start="_PVoPMKbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1ulHEKbSEe-qI7wKUSwh3w" name="Message29SendEvent" covered="_sAY1YKbQEe-qI7wKUSwh3w" message="_1uJCMKbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1upYgKbSEe-qI7wKUSwh3w" name="Message29ReceiveEvent" covered="_nFCDwKbSEe-qI7wKUSwh3w" message="_1uJCMKbSEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Dza60KbTEe-qI7wKUSwh3w" name="Message31SendEvent" covered="_nFCDwKbSEe-qI7wKUSwh3w" message="_Dy7LkKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_DzfzUKbTEe-qI7wKUSwh3w" name="Message31ReceiveEvent" covered="_uc-CAKbPEe-qI7wKUSwh3w" message="_Dy7LkKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZUAHYKbTEe-qI7wKUSwh3w" name="Message35SendEvent" covered="_3TRUUKbPEe-qI7wKUSwh3w" message="_ZTg_MKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ZUEY0KbTEe-qI7wKUSwh3w" name="Message35ReceiveEvent" covered="_PpX1IKbTEe-qI7wKUSwh3w" message="_ZTg_MKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_upk90KbTEe-qI7wKUSwh3w" name="Message38SendEvent" covered="_3TRUUKbPEe-qI7wKUSwh3w" message="_upFOkKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_upp2UKbTEe-qI7wKUSwh3w" name="Message38ReceiveEvent" covered="_PpX1IKbTEe-qI7wKUSwh3w" message="_upFOkKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_0WAVIKbTEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification41" covered="_PpX1IKbTEe-qI7wKUSwh3w" finish="_EzQKsKbUEe-qI7wKUSwh3w" start="_upp2UKbTEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_EzQKsKbUEe-qI7wKUSwh3w" name="Message44SendEvent" covered="_PpX1IKbTEe-qI7wKUSwh3w" message="_EyyQoKbUEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_EzUcIKbUEe-qI7wKUSwh3w" name="Message44ReceiveEvent" covered="_2kUm0KbTEe-qI7wKUSwh3w" message="_EyyQoKbUEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_4WvxQKbUEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification47" covered="_2kUm0KbTEe-qI7wKUSwh3w" finish="_56k7gKbUEe-qI7wKUSwh3w" start="_EzUcIKbUEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_56k7gKbUEe-qI7wKUSwh3w" name="Message49SendEvent" covered="_2kUm0KbTEe-qI7wKUSwh3w" message="_56GaYKbUEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_56qbEKbUEe-qI7wKUSwh3w" name="Message49ReceiveEvent" covered="_ViwN4KbUEe-qI7wKUSwh3w" message="_56GaYKbUEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_g4ndcKbVEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification52" covered="_ViwN4KbUEe-qI7wKUSwh3w" finish="_imfUgKbVEe-qI7wKUSwh3w" start="_56qbEKbUEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_imfUgKbVEe-qI7wKUSwh3w" name="Message54SendEvent" covered="_ViwN4KbUEe-qI7wKUSwh3w" message="_imBacKbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_imjl8KbVEe-qI7wKUSwh3w" name="Message54ReceiveEvent" covered="_FKP48KbVEe-qI7wKUSwh3w" message="_imBacKbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_yhf_sKbVEe-qI7wKUSwh3w" name="BehaviorExecutionSpecification57" covered="_FKP48KbVEe-qI7wKUSwh3w" finish="_zu94YKbVEe-qI7wKUSwh3w" start="_imjl8KbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zu94YKbVEe-qI7wKUSwh3w" name="Message59SendEvent" covered="_FKP48KbVEe-qI7wKUSwh3w" message="_zuc7AKbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zvDX8KbVEe-qI7wKUSwh3w" name="Message59ReceiveEvent" covered="_rqHRIKbVEe-qI7wKUSwh3w" message="_zuc7AKbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7J5_8KbVEe-qI7wKUSwh3w" name="Message61SendEvent" covered="_rqHRIKbVEe-qI7wKUSwh3w" message="_7JdUAKbVEe-qI7wKUSwh3w"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7J-RYKbVEe-qI7wKUSwh3w" name="Message61ReceiveEvent" covered="_2kUm0KbTEe-qI7wKUSwh3w" message="_7JdUAKbVEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_6tf_gKbPEe-qI7wKUSwh3w" name="enterUserCredentials" messageSort="asynchCall" receiveEvent="_6txFQKbPEe-qI7wKUSwh3w" sendEvent="_6tuB8KbPEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_YA0IkKbQEe-qI7wKUSwh3w" name="validateCredentials" messageSort="asynchCall" receiveEvent="_YBbzoKbQEe-qI7wKUSwh3w" sendEvent="_YBWUEKbQEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_9e8-AKbQEe-qI7wKUSwh3w" name="POST /api/v1/auth/login" messageSort="asynchCall" receiveEvent="_9fWmoKbQEe-qI7wKUSwh3w" sendEvent="_9fSVMKbQEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_DIe84KbSEe-qI7wKUSwh3w" name="findUsername" messageSort="asynchCall" receiveEvent="_DIoG0KbSEe-qI7wKUSwh3w" sendEvent="_DIm4sKbSEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_PU4oUKbSEe-qI7wKUSwh3w" name="userEntity" messageSort="reply" receiveEvent="_PVoPMKbSEe-qI7wKUSwh3w" sendEvent="_PVjWsKbSEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_1uJCMKbSEe-qI7wKUSwh3w" name="send2FactorCode" messageSort="asynchCall" receiveEvent="_1upYgKbSEe-qI7wKUSwh3w" sendEvent="_1ulHEKbSEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_Dy7LkKbTEe-qI7wKUSwh3w" name="PromptMessageCode" messageSort="reply" receiveEvent="_DzfzUKbTEe-qI7wKUSwh3w" sendEvent="_Dza60KbTEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_ZTg_MKbTEe-qI7wKUSwh3w" name="displayMenu" messageSort="asynchCall" receiveEvent="_ZUEY0KbTEe-qI7wKUSwh3w" sendEvent="_ZUAHYKbTEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_upFOkKbTEe-qI7wKUSwh3w" name="createSection" messageSort="asynchCall" receiveEvent="_upp2UKbTEe-qI7wKUSwh3w" sendEvent="_upk90KbTEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_EyyQoKbUEe-qI7wKUSwh3w" name="sendAddSectionCommand" messageSort="asynchCall" receiveEvent="_EzUcIKbUEe-qI7wKUSwh3w" sendEvent="_EzQKsKbUEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_56GaYKbUEe-qI7wKUSwh3w" name="POST api/v1/canvas/newSection" messageSort="asynchCall" receiveEvent="_56qbEKbUEe-qI7wKUSwh3w" sendEvent="_56k7gKbUEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_imBacKbVEe-qI7wKUSwh3w" name="createSection" messageSort="asynchCall" receiveEvent="_imjl8KbVEe-qI7wKUSwh3w" sendEvent="_imfUgKbVEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_zuc7AKbVEe-qI7wKUSwh3w" name="saveSection" messageSort="asynchCall" receiveEvent="_zvDX8KbVEe-qI7wKUSwh3w" sendEvent="_zu94YKbVEe-qI7wKUSwh3w"/>
+      <message xmi:type="uml:Message" xmi:id="_7JdUAKbVEe-qI7wKUSwh3w" name="Success" messageSort="reply" receiveEvent="_7J-RYKbVEe-qI7wKUSwh3w" sendEvent="_7J5_8KbVEe-qI7wKUSwh3w"/>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HiliYKZeEe-qI7wKUSwh3w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Hiqa4KZeEe-qI7wKUSwh3w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
