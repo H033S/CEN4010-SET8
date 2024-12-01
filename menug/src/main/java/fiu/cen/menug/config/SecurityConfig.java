@@ -29,8 +29,7 @@ public class SecurityConfig {
 
     private final RsaKeyProperties rsaKeys;
     private final CustomeUserDetailsService userDetailsService;
-    
-    
+
     private static final String[] SWAGGER_WHITELIST = {
             "/swagger-ui/**",
             "/v3/api-docs/**",
@@ -49,18 +48,16 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) -> authorize
                         .requestMatchers(SWAGGER_WHITELIST).permitAll()
-                        .anyRequest().authenticated()
-                )
+                        .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider())
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()))
-                .sessionManagement(session ->
-                        session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .httpBasic(Customizer.withDefaults());
         return http.build();
     }
 
     private AuthenticationProvider authenticationProvider() {
-        
+
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder());
@@ -73,15 +70,14 @@ public class SecurityConfig {
     }
 
     @Bean
-    JwtDecoder jwtDecoder(){
+    JwtDecoder jwtDecoder() {
         return NimbusJwtDecoder.withPublicKey(rsaKeys.publicKey()).build();
     }
 
     @Bean
-    JwtEncoder jwtEncoder(){
+    JwtEncoder jwtEncoder() {
 
-        JWK jwk = new RSAKey
-                .Builder(rsaKeys.publicKey())
+        JWK jwk = new RSAKey.Builder(rsaKeys.publicKey())
                 .privateKey(rsaKeys.privateKey())
                 .build();
         JWKSource jwkSource = new ImmutableJWKSet(new JWKSet(jwk));
