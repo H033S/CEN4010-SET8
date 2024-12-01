@@ -1,0 +1,90 @@
+
+body {
+  background-color: #503d3f;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.form-control {
+  font-family: "Comfortaa", sans-serif;
+}
+
+label {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.login {
+  background-color: #ffffff;
+  position: absolute;
+  padding: 20px; /* Reduced padding for smaller screens */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Make width responsive */
+  max-width: 400px; /* Max width for larger screens */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visuals */
+}
+
+.login h1 {
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login button {
+  all: unset;
+  background-color: black;
+  border-radius: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.login .bt-submit {
+  background-color: #539987;
+}
+
+.login .bt-cancel {
+  background-color: #623632;
+}
+
+.login .text-wrapper {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .login {
+    padding: 30px; /* Adjust padding for tablet-sized screens */
+    width: 80%; /* More width on smaller devices */
+  }
+
+  .login h1 {
+    font-size: 24px; /* Slightly smaller heading on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .login {
+    padding: 15px; /* Even less padding on small screens */
+    width: 95%; /* Full width on mobile */
+  }
+
+  .login h1 {
+    font-size: 20px; /* Smaller heading for mobile */
+  }
+
+  .login button {
+    height: 35px; /* Smaller button on mobile */
+    font-size: 12px; /* Smaller text on buttons */
+  }
+
+  .login .text-wrapper {
+    font-size: 12px; /* Smaller text wrapper */
+  }
+}
