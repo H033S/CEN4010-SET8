@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Login.css";
+import Helper from "../../helpers/Helper";
+import AuthService from "../../services/AuthService";
+import { useNavigate } from "react-router";
 
 function Login() {
+  const authService = new AuthService();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState({
@@ -10,19 +15,50 @@ function Login() {
     password: [],
   });
 
-  function handleSubmission(e) {
+  async function handleSubmission(e) {
     e.preventDefault(); //Avoid Reloading
 
     const usernameErrors = isValidUsername();
-    const passwordErrors = isValidPassword();
+    const passwordErrors = []; //isValidPassword();
 
     if (
       (usernameErrors && usernameErrors.length === 0) &
       (passwordErrors && passwordErrors.length === 0)
     ) {
-        //Need to submit request in here
-      handleReset();
-      return;
+      try {
+        const credentialsResponse = await authService.submitCredentials(
+          username,
+          password,
+        );
+        console.log(
+          `handleSubmission:: Are credentials response valid?`,
+          credentialsResponse.isValid,
+        );
+
+        if (credentialsResponse.isValid) {
+          handleReset();
+          console.log(
+            `handleSubmission:: Login accepted... Need to redirect user to 2FAPage`,
+          );
+          navigate("/twofa", {
+            state: {
+              twoFACode: credentialsResponse.generated2FAToken,
+              username: username,
+              password: password,
+            },
+          });
+          return;
+        } else {
+          console.log(
+            `handleSubmission:: Invalid credentials need to set error`,
+          );
+          passwordErrors.push(
+            "Credentials are invalid. Please check user and password",
+          );
+        }
+      } catch (error) {
+        alert(error);
+      }
     }
 
     setError({
@@ -32,41 +68,11 @@ function Login() {
   }
 
   function isValidUsername() {
-    const usernameErrors = [];
-
-    if (username.length < 3) {
-      console.log(`Username too short`);
-      usernameErrors.push("Username must be at least 3 characters long");
-    }
-
-    return usernameErrors;
+    return Helper.validateUsername(username);
   }
 
   function isValidPassword() {
-    const passwordErrors = [];
-
-    if (password.length < 8) {
-      console.log(`Password too short`);
-      passwordErrors.push("Password must be at least 8 characters long");
-    }
-    if (!/[a-z]/.test(password)) {
-      console.log(`Password does not contain lower case`);
-      passwordErrors.push(
-        "Password must contain at least one lowercase letter",
-      );
-    }
-    if (!/[A-Z]/.test(password)) {
-      console.log(`Password does not contain upper case`);
-      passwordErrors.push(
-        "Password must contain at least one uppercase letter",
-      );
-    }
-    if (!/[0-9]/.test(password)) {
-      console.log(`Password does not contain number`);
-      passwordErrors.push("Password must contain at least one number");
-    }
-
-    return passwordErrors;
+    return Helper.validatePassword(password);
   }
 
   function handleReset() {
