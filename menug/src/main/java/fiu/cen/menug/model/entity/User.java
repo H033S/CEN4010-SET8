@@ -1,4 +1,4 @@
-package fiu.cen.menug.model;
+package fiu.cen.menug.model.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -9,6 +9,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Entity
@@ -18,16 +19,25 @@ public class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "APP_USERS_ID")
     private String id;
-    @Column(unique = true)
+    @Column(
+            name = "APP_USERS_USERNAME",
+            unique = true
+    )
     private String username;
-    @Column
+    @Column(name = "APP_USERS_PASSWORD")
     private String password;
-    @Column
     @Email
+    @Column(name = "APP_USERS_EMAIL")
     private String email;
-    @Column
+    @Column(name = "APP_USERS_ROLES")
     private String roles;
+    @OneToMany(
+            cascade = CascadeType.ALL,
+            mappedBy = "user"
+    )
+    private Set<Menu> menuSections;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

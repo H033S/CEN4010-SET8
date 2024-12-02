@@ -1,6 +1,6 @@
 package fiu.cen.menug.repository;
 
-import fiu.cen.menug.model.User;
+import fiu.cen.menug.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
