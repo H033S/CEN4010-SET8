@@ -8,6 +8,11 @@ import lombok.Data;
 @Table(name = "category")
 public class Category {
 
+    public Category(){}
+    public Category(String name){
+        this.name = name;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "CATEGORY_ID")

@@ -11,6 +11,15 @@ import java.math.BigDecimal;
 @Table(name = "menu_item")
 public class MenuItem {
 
+    public MenuItem(){}
+    public MenuItem(
+            String description,
+            BigDecimal price
+    ){
+        this.description = description;
+        this.price = price;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "MENU_ITEM_ID")

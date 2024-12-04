@@ -3,6 +3,8 @@ package fiu.cen.menug.model.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -19,13 +21,17 @@ public class Menu {
     private String id;
     @OneToMany(
             cascade = CascadeType.ALL,
-            mappedBy = "menu"
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
     )
     private Set<MenuSection> menuSections;
-    @ManyToOne
-    @JoinColumn(
-            name = "MENU_APP_USER_ID",
-            nullable = false
-    )
-    private User user;
+
+    public void addMenuSection(MenuSection menuSection) {
+
+        if(Objects.isNull(menuSections)){
+            menuSections = new HashSet<>();
+        }
+
+        menuSections.add(menuSection);
+    }
 }

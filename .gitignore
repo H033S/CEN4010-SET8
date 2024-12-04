@@ -48,4 +48,8 @@ replay_pid*
 **/yarn-debug.log*
 **/yarn-error.log*
 
-/scripts/
+scripts/
+**/test-db.*.db
+
+**/.classpath
+**/.project
