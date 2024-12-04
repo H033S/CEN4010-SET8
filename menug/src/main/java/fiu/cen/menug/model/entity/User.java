@@ -34,11 +34,15 @@ public class User implements UserDetails {
     @Column(name = "APP_USERS_ROLES")
     private String roles;
     @OneToMany(
-            cascade = CascadeType.ALL,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.DETACH,
+                    CascadeType.MERGE,
+                    CascadeType.REFRESH
+            },
             fetch = FetchType.EAGER
     )
     private Set<Menu> menuList;
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
