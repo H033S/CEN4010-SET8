@@ -1,6 +1,6 @@
 package fiu.cen.menug.service;
 
-import fiu.cen.menug.model.User;
+import fiu.cen.menug.model.entity.User;
 import fiu.cen.menug.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

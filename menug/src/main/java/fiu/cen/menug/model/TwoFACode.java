@@ -1,14 +1,11 @@
 package fiu.cen.menug.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+
 import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
+@Data
 public class TwoFACode {
 
     private String id;

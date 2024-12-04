@@ -1,9 +1,8 @@
 package fiu.cen.menug.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter @Setter
+@Data
 public class EmailDetails {
 
     private String recipient;

@@ -30,11 +30,12 @@ public class SecurityConfig {
     private final RsaKeyProperties rsaKeys;
     private final CustomeUserDetailsService userDetailsService;
 
-    private static final String[] SWAGGER_WHITELIST = {
+    private static final String[] WHITE_LIST = {
             "/swagger-ui/**",
             "/v3/api-docs/**",
             "/swagger-resources/**",
-            "/swagger-resources"
+            "/swagger-resources",
+            "/h2-console/**"
     };
 
     public SecurityConfig(RsaKeyProperties rsaKeys, CustomeUserDetailsService userDetailsService) {
@@ -47,7 +48,7 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers(SWAGGER_WHITELIST).permitAll()
+                        .requestMatchers(WHITE_LIST).permitAll()
                         .anyRequest().authenticated())
                 .authenticationProvider(authenticationProvider())
                 .oauth2ResourceServer((oauth2) -> oauth2.jwt(Customizer.withDefaults()))

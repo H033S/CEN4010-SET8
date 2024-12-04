@@ -1,5 +1,13 @@
 package fiu.cen.menug.controller;
 
+import fiu.cen.menug.model.EmailDetails;
+import fiu.cen.menug.model.TwoFACode;
+import fiu.cen.menug.model.entity.User;
+import fiu.cen.menug.service.CustomeUserDetailsService;
+import fiu.cen.menug.service.EmailService;
+import fiu.cen.menug.service.TokenService;
+import fiu.cen.menug.service.TwoFAService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -7,15 +15,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import fiu.cen.menug.model.EmailDetails;
-import fiu.cen.menug.model.TwoFACode;
-import fiu.cen.menug.model.User;
-import fiu.cen.menug.service.CustomeUserDetailsService;
-import fiu.cen.menug.service.EmailService;
-import fiu.cen.menug.service.TokenService;
-import fiu.cen.menug.service.TwoFAService;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 @RestController
 @RequestMapping("api/v1/auth")
