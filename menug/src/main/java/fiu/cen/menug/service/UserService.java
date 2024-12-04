@@ -29,7 +29,7 @@ public class UserService {
         User adminUser = new User();
         adminUser.setUsername("admin");
         adminUser.setPassword(passwordEncoder.encode("password"));
-        adminUser.setEmail("tonito.nazco@gmail.com");
+        adminUser.setEmail("jgarc2397@gmail.com");
         adminUser.setRoles("ROLE_ADMIN");
 
         return adminUser;
