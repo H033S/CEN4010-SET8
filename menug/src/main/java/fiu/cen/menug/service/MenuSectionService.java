@@ -2,6 +2,7 @@ package fiu.cen.menug.service;
 
 import fiu.cen.menug.model.entity.MenuSection;
 import fiu.cen.menug.repository.MenuSectionRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -23,7 +24,7 @@ public class MenuSectionService {
         return menuSectionRepository.existsById(sectionId);
     }
 
-    public void deleteById(String sectionId){
-         menuSectionRepository.deleteById(sectionId);
+    public void save(MenuSection menuSection) {
+        menuSectionRepository.save(menuSection);
     }
 }

@@ -43,35 +43,15 @@ public class CategoryController {
         });
     }
 
-//    @DeleteMapping("/{categoryId}")
-//    public ResponseEntity<?> deleteCategory(@PathVariable String categoryId) {
-//
-//        return controllerUtils.tryToPerform(() -> {
-//
-//            LOG.info("Deleting Category  with ID: {}", categoryId);
-//            final boolean categoryWasFound = categoryService.existById(categoryId);
-//
-//            if (categoryWasFound) {
-//
-//                categoryService.deleteById(categoryId);
-//                LOG.info("Category  {} was successful deleted", categoryId);
-//                return ResponseEntity.noContent().build();
-//            }
-//
-//            LOG.info("Category {} was not found.", categoryId);
-//            return ResponseEntity.notFound().build();
-//        });
-//    }
-
     @PutMapping("/{categoryId}")
-    public ResponseEntity<?> updateCategory(@PathVariable String categoryId, @RequestBody String name){
+    public ResponseEntity<?> updateCategory(@PathVariable String categoryId, @RequestBody String name) {
 
         return controllerUtils.tryToPerform(() -> {
 
             LOG.info("Checking if Category {} exists.", categoryId);
             final Optional<Category> optCategory = categoryService.findById(categoryId);
 
-            if(optCategory.isEmpty()){
+            if (optCategory.isEmpty()) {
 
                 LOG.info("Category {} wasn't found.", categoryId);
                 return ResponseEntity.notFound().build();
@@ -83,4 +63,5 @@ public class CategoryController {
             categoryService.save(category);
             return ResponseEntity.ok(CategoryResponseDTO.fromCategory(category));
         });
-    }}
+    }
+}

@@ -18,7 +18,8 @@ public class MenuSection {
     private String id;
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
     )
     @JoinColumn(
             name = "MENU_SECTION_CATEGORY_ID",

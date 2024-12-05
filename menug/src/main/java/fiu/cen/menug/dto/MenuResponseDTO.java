@@ -6,7 +6,7 @@ import java.util.List;
 
 public record MenuResponseDTO(
         String id,
-        List<MenuSectionReponseDTO> sections
+        List<MenuSectionResponseDTO> sections
 ) {
 
     public static MenuResponseDTO fromMenu(Menu menu) {
@@ -15,7 +15,7 @@ public record MenuResponseDTO(
                 menu.getId(),
                 menu
                         .getMenuSections().stream()
-                        .map(MenuSectionReponseDTO::fromMenuSection)
+                        .map(MenuSectionResponseDTO::fromMenuSection)
                         .toList()
         );
     }

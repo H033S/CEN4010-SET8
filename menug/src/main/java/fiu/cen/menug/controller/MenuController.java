@@ -2,7 +2,9 @@ package fiu.cen.menug.controller;
 
 import fiu.cen.menug.dto.MenuResponseDTO;
 import fiu.cen.menug.model.entity.Menu;
+import fiu.cen.menug.model.entity.User;
 import fiu.cen.menug.service.MenuService;
+import fiu.cen.menug.service.UserService;
 import fiu.cen.menug.utils.ControllerUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,10 +22,12 @@ public class MenuController {
     private static final Logger LOG = LoggerFactory.getLogger(MenuController.class);
 
     private final MenuService menuService;
+    private final UserService userService;
     private final ControllerUtils controllerUtils;
 
-    public MenuController(MenuService menuService, ControllerUtils controllerUtils) {
+    public MenuController(MenuService menuService, UserService userService, ControllerUtils controllerUtils) {
         this.menuService = menuService;
+        this.userService = userService;
         this.controllerUtils = controllerUtils;
     }
 
@@ -54,24 +58,24 @@ public class MenuController {
         });
     }
 
-//    @DeleteMapping("/{menuId}")
-//    public ResponseEntity<?> deleteMenuById(@PathVariable String menuId){
-//
-//        return controllerUtils.tryToPerform(() -> {
-//
-//            LOG.info("Deleting Menu with ID: {}", menuId);
-//            final boolean menuWasFound = menuService.existById(menuId);
-//
-//            if(menuWasFound){
-//
-//                menuService.deleteById(menuId);
-//                LOG.info("Menu {} was successful deleted", menuId);
-//                return ResponseEntity.noContent().build();
-//            }
-//
-//            LOG.info("Menu {} was not found.", menuId);
-//            return ResponseEntity.notFound().build();
-//        });
-//    }
+    @DeleteMapping("/{menuId}")
+    public ResponseEntity<?> deleteMenuById(
+            Authentication authentication,
+            @PathVariable String menuId)
+    {
+        return controllerUtils.withUser(authentication, user -> {
+
+            final boolean menuDeleted = user.getMenuList().removeIf(m -> m.getId().equals(menuId));
+            if(menuDeleted){
+
+                LOG.info("Persisting changes on User Id: {}", user.getId());
+                userService.save(user);
+                return ResponseEntity.noContent().build();
+            }
+
+            LOG.info("Menu Id: {} wasnt found", menuId);
+            return ResponseEntity.notFound().build();
+        });
+    }
 
 }

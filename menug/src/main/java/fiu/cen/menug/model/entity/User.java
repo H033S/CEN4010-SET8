@@ -34,13 +34,9 @@ public class User implements UserDetails {
     @Column(name = "APP_USERS_ROLES")
     private String roles;
     @OneToMany(
-            cascade = {
-                    CascadeType.PERSIST,
-                    CascadeType.DETACH,
-                    CascadeType.MERGE,
-                    CascadeType.REFRESH
-            },
-            fetch = FetchType.EAGER
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            orphanRemoval = true
     )
     private Set<Menu> menuList;
 
