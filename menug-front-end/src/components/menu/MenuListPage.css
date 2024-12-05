@@ -1,0 +1,90 @@
+body {
+  background-color: #503d3f;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.form-control {
+  font-family: "Comfortaa", sans-serif;
+}
+
+label {
+  font-family: "Comfortaa", sans-serif;
+}
+
+.menu {
+  background-color: #ffffff;
+  position: absolute;
+  padding: 20px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  min-height: 600px;
+  max-width: 1500px;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+}
+
+.menu h1 {
+  font-family: "Comfortaa", sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.menu button {
+  all: unset;
+  margin: 5px;
+  padding: 5px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+.menu .bt-submit {
+  background-color: #539987;
+}
+
+.menu .bt-cancel {
+  background-color: #623632;
+}
+
+.menu .text-wrapper {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .menu {
+    padding: 30px; /* Adjust padding for tablet-sized screens */
+    width: 80%; /* More width on smaller devices */
+  }
+
+  .menu h1 {
+    font-size: 24px; /* Slightly smaller heading on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 15px; /* Even less padding on small screens */
+    width: 95%; /* Full width on mobile */
+  }
+
+  .menu h1 {
+    font-size: 20px; /* Smaller heading for mobile */
+  }
+
+  .menu button {
+    height: 35px; /* Smaller button on mobile */
+    font-size: 12px; /* Smaller text on buttons */
+  }
+
+  .menu .text-wrapper {
+    font-size: 12px; /* Smaller text wrapper */
+  }
+}

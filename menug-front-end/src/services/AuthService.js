@@ -1,4 +1,3 @@
-import { Promise } from "q";
 import CredentialsResponse from "../dto/CredentialsResponse";
 import Token2FA from "../models/Token2FA";
 
@@ -27,6 +26,7 @@ class AuthService {
         headers: {
           "Content-Type": "application/json",
           Authorization: basicAuthHeader,
+                    Authorization: `Bearer dsjfadsjfidsjfdsajfidsjfifeiofewhfjewiofjewifjuoi`
         },
       });
 
