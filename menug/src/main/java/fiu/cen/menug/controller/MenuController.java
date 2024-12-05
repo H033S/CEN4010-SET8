@@ -2,10 +2,10 @@ package fiu.cen.menug.controller;
 
 import fiu.cen.menug.dto.MenuResponseDTO;
 import fiu.cen.menug.model.entity.Menu;
-import fiu.cen.menug.model.entity.User;
 import fiu.cen.menug.service.MenuService;
 import fiu.cen.menug.service.UserService;
 import fiu.cen.menug.utils.ControllerUtils;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/menu")
+@SecurityRequirement(name = "jwtAuth")
 public class MenuController {
 
     private static final Logger LOG = LoggerFactory.getLogger(MenuController.class);

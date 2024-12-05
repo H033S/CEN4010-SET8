@@ -4,6 +4,7 @@ import fiu.cen.menug.dto.CategoryResponseDTO;
 import fiu.cen.menug.model.entity.Category;
 import fiu.cen.menug.service.CategoryService;
 import fiu.cen.menug.utils.ControllerUtils;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/category")
+@SecurityRequirement(name = "jwtAuth")
 public class CategoryController {
 
     private static final Logger LOG = LoggerFactory.getLogger(CategoryController.class);
