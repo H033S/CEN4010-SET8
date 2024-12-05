@@ -26,7 +26,7 @@ public class MenuService {
         return menuRepository.existsById(menuId);
     }
 
-    public void deleteById(String menuId) {
-        menuRepository.deleteById(menuId);
+    public void save(Menu menu) {
+        menuRepository.save(menu);
     }
 }

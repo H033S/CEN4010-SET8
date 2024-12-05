@@ -2,6 +2,7 @@ package fiu.cen.menug.service;
 
 import fiu.cen.menug.model.entity.MenuItem;
 import fiu.cen.menug.repository.MenuItemRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -21,5 +22,14 @@ public class MenuItemService {
 
     public MenuItem save(MenuItem menuItem){
         return menuItemRepository.save(menuItem);
+    }
+
+    public boolean existsById(String menuItemId){
+        return menuItemRepository.existsById(menuItemId);
+    }
+
+    @Transactional
+    public void deleteById(String menuItemId) {
+        menuItemRepository.deleteById(menuItemId);
     }
 }
