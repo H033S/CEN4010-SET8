@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import Helper from "../../helpers/Helper";
 import AuthService from "../../services/AuthService";
+import MenuService from "../../services/MenuService";
 import "../login/Login.css";
 
 function TwoFaForm() {
   const location = useLocation();
   const [code, setCode] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const { twoFACode, username, password } = location.state || {};
   const authService = new AuthService();
+  const menuService = new MenuService();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -36,14 +39,21 @@ function TwoFaForm() {
     console.log("handleSubmit::Valid Code was entered. Retrieving JWT token");
     const jwt = await authService.getJWTTokenAuthentication(username, password);
     console.log(`handleSubmit::Token received`);
-    console.log("Need to redirect the user to Menu List Page");
+    const menuList = await menuService.getMenuHeaderList(jwt);
+
+    navigate("/menulist", {
+      state: {
+        jwtToken: jwt,
+        menuListInput: menuList,
+      },
+    });
   }
 
   function handleReset() {
     setCode("");
     setError("");
   }
-
+  useNavigate();
   return (
     <div className="login">
       <h1>Enter Verification Code</h1>

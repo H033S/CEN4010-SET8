@@ -16,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -63,13 +64,15 @@ class Runner implements CommandLineRunner {
             menuSection2.addMenuItem(menuItem3);
 
             Menu menu1 = new Menu();
+            menu1.setName("Los Amigos");
+            menu1.setCreationDate(LocalDate.now());
             menu1.addMenuSection(menuSection1);
             menu1.addMenuSection(menuSection2);
 
             User admin = new User();
             admin.setUsername("admin");
             admin.setPassword(passwordEncoder.encode("password"));
-            admin.setEmail("test@example.com");
+            admin.setEmail("tonito.nazco@gmail.com");
             admin.setRoles("ROLE_USER");
 
             // Ensure menuList is initialized

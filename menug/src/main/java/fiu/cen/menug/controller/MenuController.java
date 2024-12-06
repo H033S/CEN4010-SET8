@@ -1,19 +1,28 @@
 package fiu.cen.menug.controller;
 
-import fiu.cen.menug.dto.MenuResponseDTO;
-import fiu.cen.menug.model.entity.Menu;
-import fiu.cen.menug.service.MenuService;
-import fiu.cen.menug.service.UserService;
-import fiu.cen.menug.utils.ControllerUtils;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import java.util.List;
+import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Optional;
+import fiu.cen.menug.dto.MenuHeaderDTO;
+import fiu.cen.menug.dto.MenuResponseDTO;
+import fiu.cen.menug.model.entity.Menu;
+import fiu.cen.menug.repository.MenuRepository;
+import fiu.cen.menug.service.MenuService;
+import fiu.cen.menug.service.UserService;
+import fiu.cen.menug.utils.ControllerUtils;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 @RestController
 @RequestMapping("api/v1/menu")
@@ -33,15 +42,28 @@ public class MenuController {
     }
 
     @GetMapping
-    public ResponseEntity<List<MenuResponseDTO>> getAllMenusByUserId(Authentication authentication) {
+    public ResponseEntity<List<MenuHeaderDTO>> getAllMenusByUserId(Authentication authentication) {
 
         return controllerUtils.withUser(authentication, user -> {
 
-            final List<MenuResponseDTO> responseBody = user
+            final List<MenuHeaderDTO> responseBody = user
                     .getMenuList()
                     .stream()
-                    .map(MenuResponseDTO::fromMenu).toList();
+                    .map(MenuHeaderDTO::fromMenu)
+                    .toList();
             return ResponseEntity.ok(responseBody);
+        });
+    }
+
+    @PostMapping
+    public ResponseEntity<MenuResponseDTO> addMenu(
+            Authentication authentication,
+            @RequestBody Menu menu) {
+        return controllerUtils.withUser(authentication, user -> {
+            user.getMenuList().add(menu);
+            userService.save(user);
+
+            return ResponseEntity.ok(MenuResponseDTO.fromMenu(menu));
         });
     }
 
@@ -62,12 +84,11 @@ public class MenuController {
     @DeleteMapping("/{menuId}")
     public ResponseEntity<?> deleteMenuById(
             Authentication authentication,
-            @PathVariable String menuId)
-    {
+            @PathVariable String menuId) {
         return controllerUtils.withUser(authentication, user -> {
 
             final boolean menuDeleted = user.getMenuList().removeIf(m -> m.getId().equals(menuId));
-            if(menuDeleted){
+            if (menuDeleted) {
 
                 LOG.info("Persisting changes on User Id: {}", user.getId());
                 userService.save(user);

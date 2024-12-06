@@ -1,20 +1,17 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./MenuListPage.css";
+import MenuService from "../../services/MenuService";
 
-const MenuListPage = function () {
-  const [menuList, setMenuList] = useState([
-    { id: 1, name: "Breakfast Menu", createdAt: "2024-12-01" },
-    { id: 2, name: "Lunch Specials", createdAt: "2024-12-02" },
-    { id: 3, name: "Sadwich Specials", createdAt: "2024-12-02" },
-    { id: 4, name: "Fish Specials", createdAt: "2024-12-02" },
-    { id: 5, name: "Chicken Specials", createdAt: "2024-12-02" },
-    { id: 6, name: "Salad Specials", createdAt: "2024-12-02" },
-    { id: 6, name: "Salad Specials", createdAt: "2024-12-02" },
-    { id: 6, name: "Salad Specials", createdAt: "2024-12-02" },
-    { id: 6, name: "Salad Specials", createdAt: "2024-12-02" },
-    { id: 6, name: "Salad Specials", createdAt: "2024-12-02" },
-  ]);
+function MenuListPage() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { jwtToken, menuListInput } = location.state || {};
+  console.log("Token", jwtToken);
+  console.log("Menu List", menuListInput);
+
+  const [menuList, setMenuList] = useState(menuListInput || []);
 
   /**
    * Will create a new Menu and redirect the user to
@@ -23,7 +20,13 @@ const MenuListPage = function () {
    * @returns {void}
    *
    */
-  function handleAddMenu() {}
+  function handleAddMenu() {
+        navigate("/newmenu", {
+            state: {
+                jwtToken: jwtToken
+            }
+        })
+    }
 
   /**
    * Not sure what this is going to do
@@ -56,7 +59,7 @@ const MenuListPage = function () {
             <tr key={menu.id}>
               <td>{menu.id}</td>
               <td>{menu.name}</td>
-              <td>{menu.createdAt}</td>
+              <td>{menu.creationDate}</td>
               <td>
                 <button
                   className="bt-submit"
@@ -77,6 +80,6 @@ const MenuListPage = function () {
       </table>
     </div>
   );
-};
+}
 
 export default MenuListPage;

@@ -8,24 +8,21 @@ import "./MenuItem.css";
  */
 const MenuItem = function ({ item, deleteMenuItem }) {
   return (
-    <div id={item.id} className="menu-item">
-      <img
-        src={item.imageUrl}
-        alt={item.description}
-        className="menu-item-image"
-        onError={(e) =>
-          (e.target.src =
-            "https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg")
-        }
-      />
-      <div className="menu-item-details">
-        <span className="item-name">{item.description}</span>
-        <span className="item-price">${item.price.toFixed(2)}</span>
-      </div>
-      <button onClick={() => deleteMenuItem()} className="delete-button">
-        <span className="text-wrapper">Delete</span>
-      </button>
-    </div>
+    <tr class="menu-row">
+      <td class="menu-item-image-cell">
+        <img
+          class="menu-item-image"
+          alt={item.description}
+          src={item.imageUrl}
+        />
+      </td>
+      <td class="menu-item-description">{item.description}</td>
+      <td class="menu-item-price">$ {item.price.toFixed(2)}</td>
+      <td class="menu-item-actions">
+        <button class="bt-submit"><span className="text-wrapper">Edit</span></button>
+        <button class="bt-cancel"><span className="text-wrapper">Delete</span></button>
+      </td>
+    </tr>
   );
 };
 

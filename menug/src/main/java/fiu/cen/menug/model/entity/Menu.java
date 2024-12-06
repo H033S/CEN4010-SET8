@@ -1,11 +1,20 @@
 package fiu.cen.menug.model.entity;
 
-import jakarta.persistence.*;
-import lombok.Data;
-
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.Data;
 
 /**
  * Menu
@@ -19,6 +28,10 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "MENU_ID")
     private String id;
+    @Column(name = "MENU_NAME")
+    private String name;
+    @Column(name = "MENU_CREATION_DATE")
+    private LocalDate creationDate;
     @OneToMany(
             cascade = CascadeType.ALL,
             fetch = FetchType.EAGER,
